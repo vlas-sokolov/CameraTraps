@@ -9,7 +9,6 @@ Core rendering functions shared across visualization scripts
 from io import BytesIO
 from typing import Union
 
-import matplotlib.pyplot as plt
 import numpy as np
 import requests
 from PIL import Image, ImageFile, ImageFont, ImageDraw
@@ -107,6 +106,7 @@ def resize_image(image, target_width, target_height=-1):
 
 
 def show_images_in_a_row(images):
+    import matplotlib.pyplot as plt
 
     num = len(images)
     assert num > 0
