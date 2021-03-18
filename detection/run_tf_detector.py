@@ -67,7 +67,8 @@ warnings.filterwarnings('ignore', category=FutureWarning)
 # Useful hack to force CPU inference
 # os.environ['CUDA_VISIBLE_DEVICES'] = '-1'
 
-import tensorflow as tf
+# switch to compatibility mode to get some flexibility with TF versions
+import tensorflow.compat.v1 as tf
 
 print('TensorFlow version:', tf.__version__)
 print('Is GPU available? tf.test.is_gpu_available:', tf.test.is_gpu_available())
